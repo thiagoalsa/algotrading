@@ -1,8 +1,11 @@
+import requests
 from easyT.manager import Manager
 from easyT.platforms import Platforms
 import MetaTrader5 as mt5
 import pandas as pd
 from datetime import datetime
+
+# modelo = ExtraTreesClassifier()
 
 # Teste Joao Euko easyT
 
@@ -194,7 +197,9 @@ while True:
                             if preco_ask < local_preco["120"].item():
 
                                 if lista_canais[0] < canal_close > lista_canais[1]:
+                                    # prediction = requests.get(f"http://127.0.0.1:8000/ping")
                                     compra(ativo, 1, sl, tp)
+                                    # previsoes = modelo.predict(x_teste["x_test"][:])
                                     lista_canais.pop(0)
                                     lista_canais.append(canal_preco)
 
