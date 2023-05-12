@@ -3,6 +3,7 @@ from easyT.platforms import Platforms
 import MetaTrader5 as mt5
 import pandas as pd
 from datetime import datetime
+import numpy as np
 
 # Teste Joao Euko easyT
 
@@ -130,9 +131,14 @@ lista_canais = []
 
 
 positions = mt5.positions_get()
-print(positions)
 
+historico_dataframe = pd.read_csv('data/HistoricoMT5.csv', index_col=0)
 
+historico_dataframe['result_ml'] = np.where(historico_dataframe['profit'] > 0, 1, 0)
+
+historico_dataframe = historico_dataframe.drop('profit', axis=1)
+
+print(historico_dataframe)
 
 while True:
     preco_ask = round(mt5.symbol_info_tick(ativo).ask, 5)

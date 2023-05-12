@@ -19,8 +19,6 @@ to_date = datetime.now()
 deals = mt5.history_deals_get(from_date, to_date, group="*GBPUSD*")
 
 
-
-
 # exibimos essas transações como uma tabela usando pandas.DataFrame
 
 df = pd.DataFrame(list(deals), columns=deals[0]._asdict().keys())
@@ -40,7 +38,7 @@ print(df_limpo[68:])
 print(df_limpo)
 df = df_limpo.query('profit != 0')
 print(df)
-df.to_csv('HistoricoMT5.csv', index=True)
+#df.to_csv('HistoricoMT5.csv', index=True)
 
 df['result_ml'] = np.where(df['profit'] > 0, 1, 0)
 
