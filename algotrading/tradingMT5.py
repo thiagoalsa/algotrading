@@ -28,7 +28,7 @@ pd.set_option('mode.chained_assignment', None)
 
 # Coletando as linhas pro canal
 
-linhas = pd.read_csv("Tabelacanais750.csv")
+linhas = pd.read_csv("data/Tabelacanais750.csv")
 
 # Criando o ativo a ser operado
 
@@ -134,9 +134,8 @@ print(positions)
 
 
 while True:
-
-    preco_ask = round(mt5.symbol_info_tick(ativo).ask, 5)
-    #preco_ask = float(input('Preco do mercado: '))
+    #preco_ask = round(mt5.symbol_info_tick(ativo).ask, 5)
+    preco_ask = float(input('Preco do mercado: '))
 
     if round(preco_ask, 5) != round(mt5.symbol_info_tick(ativo).ask, 5):
         rates = manager.get_rates(2, symbol, 15)
@@ -159,9 +158,11 @@ while True:
 
         if canal_preco in lista_canais:
             #print('Esta no mesmo Canal')
-            if canal_preco != lista_canais[1]:
-                lista_canais.append(canal_preco)
-                lista_canais.pop(0)
+            if len(lista_canais) >= 2:
+                if canal_preco != lista_canais[1]:
+                    lista_canais.append(canal_preco)
+                    lista_canais.pop(0)
+
         else:
             #print('\033[43m MUDANCA DE CANAL \033[m')
             if len(lista_canais) <= 1:
@@ -242,11 +243,11 @@ while True:
                                     #print('\033[43mHouve uma troca na lista.\033[m')
 
 
-        '''print(f'Valor do mercado: {preco_ask}')
+        print(f'Valor do mercado: {preco_ask}')
         print(f'Horario: {hora_agora}')
         print(f'Ordens Abertas: {total_ordens_abertas}')
         print(f'Posicoes Abertas: {total_posicoes_abertas}')
         print(f'Esta no Canal -> \033[1;34m{canal_preco}\033[m')
         print(f'Lista de Canais -> {lista_canais}')
         print(f'Ultimo Fechamento de vela -> {round(rates_close[0],5)} no Canal -> {canal_close}')
-        print('-' * 40)'''
+        print('-' * 40)
