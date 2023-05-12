@@ -133,9 +133,10 @@ positions = mt5.positions_get()
 print(positions)
 
 
+
 while True:
-    #preco_ask = round(mt5.symbol_info_tick(ativo).ask, 5)
-    preco_ask = float(input('Preco do mercado: '))
+    preco_ask = round(mt5.symbol_info_tick(ativo).ask, 5)
+    #preco_ask = float(input('Preco do mercado: '))
 
     if round(preco_ask, 5) != round(mt5.symbol_info_tick(ativo).ask, 5):
         rates = manager.get_rates(2, symbol, 15)
