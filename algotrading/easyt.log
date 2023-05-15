@@ -1,0 +1,31 @@
+2023-05-12 21:55:44,531 INFO - __init__ - Logger Initialized in Manager
+2023-05-12 21:55:44,531 INFO - set_platform - Setting platform to metatrader5
+2023-05-12 21:55:44,531 INFO - get_initialize - Get Initialize()
+2023-05-12 21:55:44,531 INFO - get_initialize - get_initialize called
+2023-05-12 21:55:44,531 INFO - get_initialize - It is returning the platform metatrader5.
+2023-05-12 21:55:44,547 INFO - __init__ - Logger Initialized in Initialize
+2023-05-12 21:55:44,547 INFO - initialize_platform - Initializing Metatrader5.
+2023-05-12 21:55:44,547 INFO - initialize_platform - Metatrader5 successfully initialized.
+2023-05-12 21:55:44,562 INFO - initialize_symbol - Initializing symbols.
+2023-05-12 21:55:44,562 INFO - initialize_symbol - Initializing GBPUSD.
+2023-05-12 21:55:44,562 INFO - initialize_symbol - GBPUSD successfully initialized.
+2023-05-12 21:55:44,562 INFO - get_rates - Get Rates()
+2023-05-12 21:55:44,562 INFO - get_rates - get_rates called
+2023-05-12 21:55:44,562 INFO - get_rates - It is returning the platform metatrader5.
+2023-05-12 21:55:44,562 INFO - __init__ - Logger Initialized in Rates
+2023-05-12 21:55:44,562 INFO - update_rates - Rates updated
+2023-05-12 21:55:45,656 INFO - get_rates - Get Rates()
+2023-05-12 21:55:45,656 INFO - get_rates - get_rates called
+2023-05-12 21:55:45,656 INFO - get_rates - It is returning the platform metatrader5.
+2023-05-12 21:55:45,656 INFO - __init__ - Logger Initialized in Rates
+2023-05-12 21:55:45,656 INFO - update_rates - Rates updated
+2023-05-12 21:55:45,750 INFO - get_rates - Get Rates()
+2023-05-12 21:55:45,750 INFO - get_rates - get_rates called
+2023-05-12 21:55:45,750 INFO - get_rates - It is returning the platform metatrader5.
+2023-05-12 21:55:45,750 INFO - __init__ - Logger Initialized in Rates
+2023-05-12 21:55:45,750 INFO - update_rates - Rates updated
+2023-05-12 21:55:46,078 INFO - get_rates - Get Rates()
+2023-05-12 21:55:46,078 INFO - get_rates - get_rates called
+2023-05-12 21:55:46,078 INFO - get_rates - It is returning the platform metatrader5.
+2023-05-12 21:55:46,078 INFO - __init__ - Logger Initialized in Rates
+2023-05-12 21:55:46,078 INFO - update_rates - Rates updated
